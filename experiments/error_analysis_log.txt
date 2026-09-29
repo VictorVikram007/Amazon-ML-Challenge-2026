@@ -1,0 +1,54 @@
+[10:48:27] Rebuilding the same sandbox-scale pool as demo_run.py (same seed) ...
+[10:49:20] pool sizes: s2=263297 s3=264293
+[10:50:02] blocking recall=0.9453 avg_cand=99.97
+[10:50:15] Training xgboost (selected model) ...
+[10:50:21] FULL THRESHOLD SWEEP (validation, xgboost):
+[10:50:21]   t=0.50  macro_entity_F0.5=0.9661  n_s1_with_match=1511  avg_matches=3.49
+[10:50:21]   t=0.55  macro_entity_F0.5=0.9666  n_s1_with_match=1511  avg_matches=3.48
+[10:50:21]   t=0.60  macro_entity_F0.5=0.9669  n_s1_with_match=1511  avg_matches=3.48
+[10:50:21]   t=0.65  macro_entity_F0.5=0.9675  n_s1_with_match=1511  avg_matches=3.47
+[10:50:21]   t=0.70  macro_entity_F0.5=0.9678  n_s1_with_match=1511  avg_matches=3.47
+[10:50:21]   t=0.75  macro_entity_F0.5=0.9682  n_s1_with_match=1511  avg_matches=3.46
+[10:50:21]   t=0.80  macro_entity_F0.5=0.9687  n_s1_with_match=1511  avg_matches=3.45
+[10:50:21]   t=0.85  macro_entity_F0.5=0.9699  n_s1_with_match=1509  avg_matches=3.44
+[10:50:21]   t=0.90  macro_entity_F0.5=0.9691  n_s1_with_match=1508  avg_matches=3.42
+[10:50:21]   t=0.95  macro_entity_F0.5=0.9676  n_s1_with_match=1507  avg_matches=3.40
+[10:50:21] TOP FEATURE IMPORTANCES (xgboost):
+[10:50:21]   addr_token_jaccard: 0.7012
+[10:50:21]   name_token_sort_ratio: 0.1135
+[10:50:21]   name_token_set_ratio: 0.0327
+[10:50:21]   sim_sum: 0.0289
+[10:50:21]   name_char_ngram_jaccard: 0.0251
+[10:50:21]   addr_len_ratio: 0.0239
+[10:50:21]   name_token_jaccard: 0.0128
+[10:50:21]   sim_product: 0.0114
+[10:50:21]   addr_numeric_jaccard: 0.0109
+[10:50:21]   name_common_prefix_ratio: 0.0096
+[10:50:22] 
+=== FALSE POSITIVE examples (predicted match, not true) — n=12 shown ===
+[10:50:22]   S1-557472364 vs S3-219307693 (proba=0.999): S1['Blackwood & Rackley High' | '313 Calhoun Street, Baltimore, MD']  vs  CAND['Blackwood & Rackley High Ltd' | 'Maryland, 320 Calhoun St, Baltimore']
+[10:50:22]   S1-48161342 vs S3-294455983 (proba=0.985): S1['Hennessey Jab of Mesa LLC' | 'AZ, Mesa, 612 108th Place']  vs  CAND['Hennessey Jab of Oewr, (LLC)' | '']
+[10:50:22]   S1-151232377 vs S3-999818823 (proba=0.869): S1['Natural Brothers Private Limited' | 'Office 3, Vikas Bhawan 26 Cawasji Patel Street, Fort, Mumbai, Mumbai City, Maharashtra']  vs  CAND['NATURAL BUILD PVT LTD' | '']
+[10:50:22]   S1-620850468 vs S2-961670032 (proba=0.858): S1['Kaveri & Sons Private Limited' | '14/61A (New No. 14/103 Civil Lines, Kanpur, Panna, Uttar Pradesh']  vs  CAND['Kanpur Solutions Pvt Ltd' | 'NO 14/66  FLAT NO. 106, SANGEETA APARTMENT CIVIL LINES, KANPUR, Uttar Pradesh']
+[10:50:22]   S1-602781481 vs S2-97644911 (proba=0.969): S1['Agra Care Pvt. Ltd.' | 'H.No.-L.I.G, B-756, Kalindi Vihar Mauja Naraich, Agra, Uttar Pradesh']  vs  CAND['Pvt Agra Software Ltd' | 'H.NO 33 MAUJA LAKAWALI, AGRA, Uttar Pradesh']
+[10:50:22]   S1-516145548 vs S2-392898630 (proba=0.971): S1['Dream Exports Pvt Ltd' | 'Bairathi Colony Bairathi Colony, Indore, Madhya Pradesh']  vs  CAND['भारत इंडियन इंडस्ट्रीज प्रा. लि.' | '15, PROFFESOR COLONY, INDORE, INDORE, Madhya Pradesh']
+[10:50:22]   S1-306341609 vs S2-817203659 (proba=0.927): S1['Guru International Private Limited' | 'Old No.33 New No.6, 4Th Street, Tatabad, Coimbatore, Tamil Nadu']  vs  CAND['அர்பன் கன்சல்டன்சி பிரைவேட் லிமிடெட்' | 'NO 6, 4TH STREET, RR COLONY ASHOK NAGAR, CHENNAI, Tamil Nadu']
+[10:50:22]   S1-385015252 vs S2-888931638 (proba=0.992): S1['Huynh Lending' | '735 N Temple Street, Unit 709, Salt Lake City, UT']  vs  CAND['Huynh  Lending Lakeside' | '742 NORTH TEMPLE STREET, PMB 346, SALT LAKE ICTY, UT']
+[10:50:22]   S1-458802615 vs S3-810444212 (proba=0.968): S1['Sakshi & Co' | 'Shop No 57, Second Floor Palika Bazar, Malviya Nagar, Jaipur, Rajasthan']  vs  CAND['Sakshi  &' | '8/36 Vidhyadhar Nagar, Jaipur, RJ']
+[10:50:22]   S1-749138865 vs S2-286481638 (proba=0.851): S1['Savla & Brothers Private Limited' | 'A-212, A Block Shyam Vihar, Phase -1, Deenpur, Najafgarh, New Delhi, Delhi']  vs  CAND['डिजिटल अर्बन हेल्थकेयर प्राइवेट लिमिटेड' | 'A-212 (LGF), NEW DELHI, N/A, Delhi']
+[10:50:22]   S1-435421636 vs S2-736862730 (proba=0.890): S1['New Delhi (india) Private Limited' | 'G-33, Jangpura Extension, New Delhi, Delhi']  vs  CAND['साईं वन फाउंडेशन प्राइवेट लिमिटेड' | 'N-16, AB-T, JANGPURA EXTENSION, NEW DELHI, SOUTH DELHI, Delhi']
+[10:50:22]   S1-892498993 vs S3-269893328 (proba=0.999): S1['Bangalore India Private Limited' | '#5, Mchs, 14Th Main, 15Th Cross Sector 4, Hsr Layout, Bangalore, Karnataka']  vs  CAND['Bangalore India Private' | 'Plot 214 1St, 2Nd, 3Rd Floor, No.5, 14Th Main 15Th Cross, Sector 4, Hsr Layout, Bengaluru, Bangalore, ಕರ್ನಾಟಕ']
+[10:50:22] 
+=== FALSE NEGATIVE examples (true match, missed) — n=12 shown ===
+[10:50:22]   S1-866737119 vs S3-594036658 [DROPPED AT BLOCKING STAGE]: S1['Delhi (india) Private Limited' | 'Plot No. 3, 3Rd Floor, Opp Dhaka School, Bhai Parmanand Colony, Delhi, North Delhi, Delhi']  vs  CAND['Delhi (índia) Private Limited' | '']
+[10:50:22]   S1-170723026 vs S3-466506783 [in candidates but scored below threshold]: S1['Southern Projects Limited' | 'F.No B-202, Siddhi Pooja Residency, S.No. 35/6, P.No D-27, D-28, Anandwalli Rameshwar, Nashik, Maharashtra']  vs  CAND['Sri @southernprojects' | 'Hn 78 F.no B-202, Nashik, Sangamner Maharashtra, महाराष्ट्र']
+[10:50:22]   S1-170723026 vs S3-636326255 [in candidates but scored below threshold]: S1['Southern Projects Limited' | 'F.No B-202, Siddhi Pooja Residency, S.No. 35/6, P.No D-27, D-28, Anandwalli Rameshwar, Nashik, Maharashtra']  vs  CAND['Mr Southern Pbejts Limited' | 'Hn 78 F.no B-202, Nashik, Sangamner Maharashtra, महाराष्ट्र']
+[10:50:22]   S1-500605522 vs S3-59519645 [DROPPED AT BLOCKING STAGE]: S1['Caldos Chicago Group' | '279 Villa Street, San Luis, AZ']  vs  CAND['Caldoschicago.Com' | 'San Luis, Arizona, Villa Street']
+[10:50:22]   S1-459380335 vs S3-583879648 [in candidates but scored below threshold]: S1['Fortune Constructions' | 'Kanpur Nagar, Uttar Pradesh, 16/80, Civil Lines, Bara Chauraha']  vs  CAND['फॉर्च्यून कंस्ट्रक्शंस' | 'उत्तर प्रदेश, 16/80, Kanpur Nagar, Bara Chauraha']
+[10:50:22]   S1-861178679 vs S3-48354690 [in candidates but scored below threshold]: S1['Sun Marketing' | 'S No. 343, Plot No. 18, Bhokardan Naka, Jalna, Maharashtra']  vs  CAND['सन मार्केटिंग' | 'S No. G-343, Jalna, महाराष्ट्र']
+[10:50:22]   S1-64208086 vs S3-761357619 [DROPPED AT BLOCKING STAGE]: S1['Pioneer Construction Limited' | 'C/O Krishnadas, Kannottukavu, Palakkad, Kerala']  vs  CAND['Pioneer [Construction]' | '']
+[10:50:22]   S1-928921929 vs S3-622257807 [DROPPED AT BLOCKING STAGE]: S1['Dvn Charitable Trust LLP' | 'E-156, Back Portion, 2Nd Floor, Sector-63, Noida, Gautam Buddha Nagar, Uttar Pradesh, Noida, Gautam Buddha Nagar, Uttar Pradesh']  vs  CAND['Dvn Charitable Trust L.L.P.' | 'E-15, Noida, Gautam Buddha Nagar, उत्तर प्रदेश']
+[10:50:22]   S1-275031000 vs S3-708634101 [DROPPED AT BLOCKING STAGE]: S1['Tri-State Frontier Rent LLC' | '5302 Manhassett Drive, Arlington, TX']  vs  CAND['Tri-State Frontier LLC Services' | '']
+[10:50:22]   S1-499893677 vs S2-68425278 [DROPPED AT BLOCKING STAGE]: S1['Ananta Mills Pvt Ltd' | 'C/O-Ram Binay Singh, Plot No 2463, Mahuabagh, Rupaspur Patna, Phulwari, Patna, Bihar']  vs  CAND['Ananta-Pvt Ltd Service Service' | '']
+[10:50:22]   S1-770186164 vs S3-285779754 [DROPPED AT BLOCKING STAGE]: S1['Contreras Clear Investments' | '1013 6th St, Nevada, IA']  vs  CAND['Contreras Clear [Services]' | '6th St, Nevada, Iowa']
+[10:50:22]   S1-297520632 vs S2-27954283 [DROPPED AT BLOCKING STAGE]: S1['JE Aeon Group' | '3745 Breakstone Drive, Fayetteville, AR']  vs  CAND['jéaeon.com' | 'BREAKSTONE DR, AR, FAYETTEVILLE']

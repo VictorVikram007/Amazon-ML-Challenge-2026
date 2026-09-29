@@ -1,0 +1,29 @@
+# Challenge data (large; not redistributable)
+dataset/
+
+# Unrelated project that lives in this folder
+indian-cinema-ai/
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Generated intermediates (multi-GB parquet files, logs)
+work/train/
+work/test/
+work/*.log
+*.parquet
+*.sqlite3
+
+# Submission outputs (~200 MB each, above GitHub's file limit)
+submission*/
+output/
+matching_results*.tsv
+candidate_pairs*.tsv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

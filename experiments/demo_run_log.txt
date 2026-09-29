@@ -1,0 +1,35 @@
+[10:43:42] Loading ground truth ...
+[10:43:50] Loading Source1 and sampling S1 entities ...
+[10:43:54]   sampled 8000 S1 entities; 434 singletons, 7566 with >=1 true match
+[10:43:54]   27590 true-match ids to guarantee inclusion
+[10:43:54] Building record pool from Source2 (cap 250000 distractors + true matches) ...
+[10:44:14]   pool2 size = 263297
+[10:44:14] Building record pool from Source3 (cap 250000 distractors + true matches) ...
+[10:44:34]   pool3 size = 264293
+[10:44:34]   true-match ids missing from pools (should be 0): 0
+[10:44:35] Building blocking index over the pool ...
+[10:45:05]   index stats: {'n_records_indexed': 527590, 'n_countries': 2}, per-country={'us': 316100, 'india': 211490}
+[10:45:05] Computing candidates for every sampled S1 ...
+[10:45:16]   avg candidates/S1 = 99.97, max = 100
+[10:45:16]   BLOCKING RECALL (against this pool) = 0.9453
+[10:45:16] Building labeled pair table ...
+[10:45:29]   185455 pairs, positive rate = 0.1406
+[10:45:29]   train pairs=148424 (pos=20868), val pairs=37031 (pos=5213)
+[10:45:29] Training logreg ...
+[10:45:31]   trained in 1.1s
+[10:45:31]   logreg: best_threshold=0.85 val_macro_entity_F0.5=0.9637 n_s1_with_match=1510 avg_matches=3.44
+[10:45:31] Training xgboost ...
+[10:45:35]   trained in 3.6s
+[10:45:36]   xgboost: best_threshold=0.90 val_macro_entity_F0.5=0.9682 n_s1_with_match=1507 avg_matches=3.42
+[10:45:36] Training lightgbm ...
+[10:45:40]   trained in 3.9s
+[10:45:41]   lightgbm: best_threshold=0.90 val_macro_entity_F0.5=0.9679 n_s1_with_match=1507 avg_matches=3.42
+[10:45:41] SELECTED: xgboost, threshold=0.9, val macro entity F0.5=0.9682
+[10:45:41]   singleton false-positive rate on validation = 0.0127
+
+=== SUMMARY (measured, sandbox-scale demo) ===
+logreg: {'threshold': 0.85, 'macro_entity_f05': 0.9636520093204745, 'n_s1_with_match': 1510, 'avg_matches_per_matched_s1': 3.4357615894039735}
+xgboost: {'threshold': 0.9, 'macro_entity_f05': 0.9681547501388168, 'n_s1_with_match': 1507, 'avg_matches_per_matched_s1': 3.4180491041804912}
+lightgbm: {'threshold': 0.9, 'macro_entity_f05': 0.9679480580715893, 'n_s1_with_match': 1507, 'avg_matches_per_matched_s1': 3.4213669542136693}
+blocking_recall=0.9453 avg_candidates_per_s1=99.97
+selected_model=xgboost threshold=0.9 singleton_fp_rate=0.0127
